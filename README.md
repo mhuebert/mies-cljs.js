@@ -1,6 +1,6 @@
 # cljs.js error message test
 
-Observe behaviour of cljs/eval[-str] and cljs/compile-str evaluating an imbalanced `let` binding: `(fn [] (let [x 7 y] (prn y)))`.
+Observe `cljs/eval[-str]` and `cljs/compile-str` evaluate an imbalanced `let` binding: `(fn [] (let [x 7 y] (prn y)))`.
 
 `cljs/eval-str` prints expected error:
 
