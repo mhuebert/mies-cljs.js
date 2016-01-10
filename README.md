@@ -1,14 +1,14 @@
 # cljs.js error message test
 
-Observe behaviour of cljs/eval[-str] and cljs/compile-str evaluating an imbalanced `let` binding, (fn [] (let [x 7 y] (prn y))).
+Observe behaviour of cljs/eval[-str] and cljs/compile-str evaluating an imbalanced `let` binding: `(fn [] (let [x 7 y] (prn y)))`.
 
-cljs/eval-str prints expected error:
+`cljs/eval-str` prints expected error:
 
 ```clj
 {:message "Could not eval eval-str", :data {:tag :cljs/analysis-error}, :cause #error {:message "bindings must be vector of even number of elements at line 1 ", :data {:file nil, :line 1, :column 8, :tag :cljs/analysis-error}}}
 ```
 
-whereas cljs/compile-str throws:
+whereas `cljs/compile-str` throws:
 
 ```
 Uncaught Error: No method in multimethod 'cljs.compiler/emit*' for dispatch value:
